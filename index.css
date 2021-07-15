@@ -34,12 +34,16 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
 
     }
 
     .logo {
-        letter-spacing: 5px;
-        font-size: 1.2em;
+        padding: 0;
+        margin: 0;
+    }
+    .menu-icon {
+        display: none;
     }
     .navegacion ul {
         margin: 0;
@@ -71,4 +75,43 @@ body {
         padding: 4rem 0;
         text-align: center;
         margin-top: 6rem;
+    }
+
+    @media only screen and (max-width: 736px) {
+
+        .menu-icon {
+            display: block;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+
+        }
+
+        .navegacion {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .navegacion ul {
+            display: none;
+        }
+
+        .navegacion ul.show {
+            display: block;
+        }
+
+        .navegacion ul li {
+            display: block;
+        }
+    
+        .navegacion ul li a  {
+            display: block;
+            padding: 0.5rem 0rem;
+            transition: all 0.5s linear;
+            border-radius: 5px;
+        }
+    
+        .navegacion ul li a:hover {
+            background: #4a4a4a;
+    
+        }
     }
